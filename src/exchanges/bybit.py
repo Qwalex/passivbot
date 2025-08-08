@@ -33,6 +33,8 @@ class BybitBot(Passivbot):
                 "secret": self.user_info["secret"],
                 "password": self.user_info["passphrase"],
                 "headers": {"referer": self.broker_code} if self.broker_code else {},
+                "enableRateLimit": True,
+                "timeout": 30000,  # 30s
             }
         )
         self.cca = getattr(ccxt_async, self.exchange)(
@@ -41,6 +43,8 @@ class BybitBot(Passivbot):
                 "secret": self.user_info["secret"],
                 "password": self.user_info["passphrase"],
                 "headers": {"referer": self.broker_code} if self.broker_code else {},
+                "enableRateLimit": True,
+                "timeout": 30000,  # 30s
             }
         )
 
