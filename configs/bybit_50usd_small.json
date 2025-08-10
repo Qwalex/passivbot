@@ -26,7 +26,7 @@
       "ema_span_1": 475.6,
       "enforce_exposure_limit": true,
       "entry_grid_double_down_factor": 0.8473,
-      "entry_grid_spacing_pct": 0.02,
+      "entry_grid_spacing_pct": 0.03,
       "entry_grid_spacing_weight": 0.313,
       "entry_initial_ema_dist": -0.01,
       "entry_initial_qty_pct": 0.4,
@@ -98,7 +98,7 @@
       "long": [],
       "short": []
     },
-    "leverage": 10,
+    "leverage": 3,
     "market_orders_allowed": true,
     "max_n_cancellations_per_batch": 3,
     "max_n_creations_per_batch": 1,

@@ -9,6 +9,13 @@ nav:
   - Running live: live.md
   - Backtesting: backtesting.md
   - Optimizing: optimizing.md
+  - Handbook:
+    - Архитектура: handbook/01_architecture.md
+    - Установка и запуск: handbook/02_setup_and_run.md
+    - Конфигурация: handbook/03_configuration.md
+    - Лайв-логика: handbook/04_live_logic.md
+    - Бэктест и оптимизация: handbook/05_backtest_and_optimize.md
+    - Файлы и модули: handbook/06_files_reference.md
 theme:
   name: material
   logo: 'images/logo.png'
