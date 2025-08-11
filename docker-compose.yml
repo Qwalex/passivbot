@@ -29,7 +29,7 @@ services:
       - ./configs/:/app/configs/
       - ./api-keys.json:/app/api-keys.json
     working_dir: /app
-    command: ["python", "src/main.py", "configs/bybit_50usd_small.json"]
+    command: ["python", "src/main.py", "configs/bybit_100usd_small.json"]
     
   dozzle:
     profiles:

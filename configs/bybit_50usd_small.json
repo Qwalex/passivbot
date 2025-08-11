@@ -5,7 +5,6 @@
     "compress_cache": true,
     "end_date": "now",
     "exchanges": [
-      "binance",
       "bybit"
     ],
     "gap_tolerance_ohlcvs_minutes": 120,
@@ -25,11 +24,11 @@
       "ema_span_0": 279,
       "ema_span_1": 475.6,
       "enforce_exposure_limit": true,
-      "entry_grid_double_down_factor": 0.8473,
+      "entry_grid_double_down_factor": 1.2,
       "entry_grid_spacing_pct": 0.06,
       "entry_grid_spacing_weight": 0.313,
       "entry_initial_ema_dist": -0.01,
-      "entry_initial_qty_pct": 0.01,
+      "entry_initial_qty_pct": 0.005,
       "entry_trailing_double_down_factor": 2.0,
       "entry_trailing_grid_ratio": 0.005,
       "entry_trailing_retracement_pct": 0.01,
@@ -37,12 +36,12 @@
       "filter_noisiness_rolling_window": 40,
       "filter_volume_drop_pct": 0.25,
       "filter_volume_rolling_window": 1440,
-      "n_positions": 2,
-      "total_wallet_exposure_limit": 1.0,
-      "unstuck_close_pct": 0.04,
+      "n_positions": 1,
+      "total_wallet_exposure_limit": 0.8,
+      "unstuck_close_pct": 0.02,
       "unstuck_ema_dist": 0.003,
       "unstuck_loss_allowance_pct": 0.003,
-      "unstuck_threshold": 0.7
+      "unstuck_threshold": 0.8
     },
     "short": {
       "close_grid_markup_end": 0.001,
@@ -90,7 +89,7 @@
     },
     "auto_gs": true,
     "empty_means_all_approved": true,
-    "execution_delay_seconds": 3,
+    "execution_delay_seconds": 5,
     "filter_by_min_effective_cost": true,
     "forced_mode_long": "",
     "forced_mode_short": "",
@@ -98,7 +97,7 @@
       "long": [],
       "short": []
     },
-    "leverage": 3,
+    "leverage": 2,
     "market_orders_allowed": true,
     "max_n_cancellations_per_batch": 3,
     "max_n_creations_per_batch": 1,
