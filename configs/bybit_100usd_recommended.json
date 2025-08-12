@@ -78,8 +78,6 @@
   "live": {
     "approved_coins": {
       "long": [
-        "BTC",
-        "ETH", 
         "XRP",
         "ADA",
         "DOGE",
