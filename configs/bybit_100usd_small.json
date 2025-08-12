@@ -332,7 +332,7 @@
     },
     "compress_results_file": true,
     "crossover_probability": 0.64,
-    "enable_overrides": [],
+  "enable_overrides": [],
     "iters": 300000,
     "limits": {
       "penalize_if_greater_than_btc_drawdown_worst": 0.5,

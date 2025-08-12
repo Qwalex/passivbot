@@ -1,0 +1,82 @@
+{
+    "ADA": {
+        "binanceusdm": 1580428800000,
+        "bitget": 0.0,
+        "bybit": 1616025600000,
+        "gateio": 1604880000000,
+        "hyperliquid": 1609977600000,
+        "okx": 1583020800000
+    },
+    "BTC": {
+        "binanceusdm": 1567900800000,
+        "bitget": 0.0,
+        "bybit": 1642118400000,
+        "gateio": 1574035200000,
+        "hyperliquid": 1609977600000,
+        "okx": 1577836800000
+    },
+    "DOGE": {
+        "binanceusdm": 1594339200000,
+        "bitget": 0.0,
+        "bybit": 1714089600000,
+        "gateio": 1594166400000,
+        "hyperliquid": 1609977600000,
+        "okx": 1612137600000
+    },
+    "ETH": {
+        "binanceusdm": 1574812800000,
+        "bitget": 0.0,
+        "bybit": 1659657600000,
+        "gateio": 1574208000000,
+        "hyperliquid": 1609977600000,
+        "okx": 1577836800000
+    },
+    "MATIC": {
+        "binanceusdm": 0.0,
+        "bitget": 0.0,
+        "bybit": 0.0,
+        "gateio": 0.0,
+        "hyperliquid": 1609977600000,
+        "okx": 0.0
+    },
+    "PEPE": {
+        "binanceusdm": 1683244800000,
+        "bitget": 0.0,
+        "bybit": 1714003200000,
+        "gateio": 1681862400000,
+        "hyperliquid": 1682553600000,
+        "okx": 1682899200000
+    },
+    "SHIB": {
+        "binanceusdm": 1620604800000,
+        "bitget": 0.0,
+        "bybit": 1715558400000,
+        "gateio": 1620432000000,
+        "hyperliquid": 1620259200000,
+        "okx": 1619827200000
+    },
+    "SOL": {
+        "binanceusdm": 1600041600000,
+        "bitget": 0.0,
+        "bybit": 1659657600000,
+        "gateio": 1604880000000,
+        "hyperliquid": 1609977600000,
+        "okx": 1635724800000
+    },
+    "TRX": {
+        "binanceusdm": 1579046400000,
+        "bitget": 0.0,
+        "bybit": 1630368000000,
+        "gateio": 1577404800000,
+        "hyperliquid": 1609977600000,
+        "okx": 1577836800000
+    },
+    "XRP": {
+        "binanceusdm": 1578268800000,
+        "bitget": 0.0,
+        "bybit": 1659657600000,
+        "gateio": 1577404800000,
+        "hyperliquid": 1609977600000,
+        "okx": 1577836800000
+    }
+}

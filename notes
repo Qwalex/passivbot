@@ -1,0 +1,2 @@
+Запуск бектеста
+docker-compose run --rm passivbot python src/backtest.py configs/bybit_100usd_recommended.json -dp
