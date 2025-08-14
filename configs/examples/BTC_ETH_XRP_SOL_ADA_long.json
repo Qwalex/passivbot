@@ -67,7 +67,7 @@
       "filter_noisiness_rolling_window": 10,
       "filter_volume_drop_pct": 0.5,
       "filter_volume_rolling_window": 360,
-      "n_positions": 1, 
+      "n_positions": 0, 
       "total_wallet_exposure_limit": 2,
       "unstuck_close_pct": 0.001,
       "unstuck_ema_dist": -0.1,
@@ -100,7 +100,7 @@
       "long": [],
       "short": []
     },
-    "leverage": 3,
+    "leverage": 5,
     "market_orders_allowed": true,
     "max_n_cancellations_per_batch": 5,
     "max_n_creations_per_batch": 3,
