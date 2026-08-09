@@ -1,0 +1,34 @@
+---
+description: Python owns live orchestration, gating, and exchange I/O — not strategy intent
+globs: src/**/*.py
+alwaysApply: false
+---
+
+# Python Orchestration
+
+Python owns orchestration, exchange I/O, configuration, data plumbing, caching, reconciliation, and execution gating. It must not reimplement Rust strategy intent.
+
+## Live Flow (Do Not Short-Circuit)
+
+1. Refresh account/market state
+2. Build canonical strategy/risk inputs
+3. Ask Rust for ideal orders
+4. Validate the complete Rust batch as one intent
+5. Reconcile with exchange orders
+6. Gate create/cancel against readiness/safety
+7. Submit only approved actions
+8. Confirm ambiguous exchange outcomes before retry
+
+## Trading-Critical Paths
+
+For live, candles, fills/PnL, risk, indicators, or order construction, read `docs/ai/error_contract.md`.
+
+Forbidden for required inputs: swallow exceptions, invent `0.0`/`None`/`{}`/`[]`, hide missing keys with defaults, or treat partial Rust output as intent.
+
+## Config Placement
+
+- `config.live` — live and shared with backtest/optimizer
+- `config.backtest` — simulation-only
+- `config.optimize` — optimizer-only
+
+Choose the narrowest consumer-owned surface. Defaults belong in canonical loading/formatting.

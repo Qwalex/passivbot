@@ -1,0 +1,27 @@
+---
+description: Config ownership, private configs, and example-template publishing rules
+globs: configs/**/*
+alwaysApply: false
+---
+
+# Configuration
+
+## Ownership
+
+Place parameters by actual consumers (`docs/ai/principles.md`):
+
+- `live` — live + shared with backtest/optimizer
+- `backtest` — simulation-only
+- `optimize` — optimizer-only
+
+Do not put simulation-only or optimizer-only knobs into `live` out of uncertainty.
+
+## Privacy
+
+Configuration is private by default. Never commit `api-keys.json`, private account configs, local host paths, or operator-only overrides.
+
+Without case-specific approval, public examples belong only under `configs/examples/`.
+
+## Validation
+
+Config/schema changes need loader/default/roundtrip tests, parity across default-producing surfaces, and updates to affected example configs. See `docs/ai/validation.md`.

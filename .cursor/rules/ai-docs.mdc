@@ -1,0 +1,29 @@
+---
+description: How to edit Passivbot AI contracts without duplicating or stale-routing policy
+globs: docs/ai/**/*
+alwaysApply: false
+---
+
+# AI Documentation
+
+`docs/ai/` is the normative contract tree. Keep documents timeless and free of progress ledgers.
+
+## Document Classes
+
+- Canonical contracts — current normative behavior
+- Feature contracts — subsystem invariants, failure semantics, validation, code maps
+- Runbooks — procedures and commands
+- Generated references — code-owned registries (do not hand-edit as source of truth)
+- Case studies / plans — history only; they do not override contracts
+
+Put each durable rule in one place and link elsewhere. Prefer updating `principles.md` / feature contracts over restating them in `AGENTS.md`.
+
+## Checks
+
+```bash
+PYTHONPATH=src python src/tools/check_ai_docs.py
+PYTHONPATH=src python src/tools/generate_live_event_registry.py --check
+pytest tests/test_ai_docs.py tests/test_live_event_registry_docs.py
+```
+
+Router: `docs/ai/README.md`.

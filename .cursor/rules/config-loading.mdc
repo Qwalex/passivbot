@@ -1,0 +1,21 @@
+---
+description: Config loader/schema ownership when editing src/config
+globs: src/config/**/*
+alwaysApply: false
+---
+
+# Config Loading And Schema
+
+Canonical loading and formatting own defaults. Runtime consumers must not reapply them.
+
+## Placement
+
+- `config.live` — live and shared with backtest/optimizer
+- `config.backtest` — simulation-only
+- `config.optimize` — optimizer-only
+
+Migrations and renames need tests and, when user-facing, a `CHANGELOG.md` `Unreleased` note.
+
+## Validation
+
+Loader/default/roundtrip tests, parity across every canonical default-producing surface, and affected `configs/examples/` updates. See `docs/ai/validation.md`.

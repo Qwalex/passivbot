@@ -1,0 +1,26 @@
+---
+description: Trading-critical failure contract for candles, fills, live risk, and order paths
+globs: src/live/**/*,src/candlestick_manager.py,src/fill_events_manager.py,src/passivbot.py
+alwaysApply: false
+---
+
+# Trading-Critical Paths
+
+Read `docs/ai/error_contract.md` before changing failure, fallback, readiness, or data-availability behavior.
+
+## Vocabulary
+
+- **propagate** — preserve exception + context for caller policy
+- **unavailable** — required surface absent; do not invent a neutral value
+- **defer** — postpone only the affected action/order class
+- **fail closed** — block unsafe evaluation
+- **degraded** — documented bounded fallback, observable and tested
+- **fatal** — stop; no safe caller policy remains
+
+## Account-Critical Before Any Exchange Action
+
+Positions, balance, and open orders must be available. Market snapshots must be fresh for symbols acted upon.
+
+## Statelessness
+
+Trading decisions must be reproducible after restart from exchange state and config. Do not add decision-changing local state that cannot be rederived.

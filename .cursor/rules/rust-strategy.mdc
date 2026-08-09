@@ -1,0 +1,31 @@
+---
+description: Rust owns strategy, orders, risk, unstuck, and backtest behavior
+globs: passivbot-rust/**/*
+alwaysApply: false
+---
+
+# Rust Strategy And Orders
+
+Rust is the source of truth for order logic, strategies, risk, unstuck, backtesting, and derived analysis metrics.
+
+## Ownership
+
+- Ideal-order results are atomic current intent. Validate the complete batch before reconciliation.
+- Malformed Rust output is fatal. Python must not substitute prior ideals, actual orders, or a usable subset.
+- Suspected semantic defects belong in Rust with Rust-side regressions — not Python second-guessing.
+
+## Conventions
+
+- `pside` / `position_side` = `long`/`short`; `side` / `order_side` = `buy`/`sell`
+- `qty` and `pos_size` are signed internally; use `abs(qty)` only at unsigned exchange boundaries
+- Keep EMA spans as floats, including derived spans
+
+## Validation
+
+Read `docs/ai/runbooks/rust_extension.md` and `docs/ai/validation.md`.
+
+Minimum for behavior changes:
+
+1. focused Rust tests
+2. rebuild and verify the Python extension fingerprint
+3. Python parity / integration checks for affected callers

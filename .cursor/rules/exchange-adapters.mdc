@@ -1,0 +1,26 @@
+---
+description: Exchange adapter safety, broker attribution, and offline-first validation
+globs: src/exchanges/**/*
+alwaysApply: false
+---
+
+# Exchange Adapters
+
+Read `docs/ai/features/exchange_integrations.md` for exchange-specific contracts.
+
+## Authority Tiers
+
+1. Offline fixtures / `fake` — safe by default
+2. Public unauthenticated probes — state network use before running
+3. Authenticated read-only — explicit user approval
+4. Authenticated mutating (orders, leverage, modes, deploy) — explicit approval + clear target
+
+Testnet / demo / paper labels do not lower the tier when credentials or account mutations are involved.
+
+## Broker Attribution
+
+Broker codes are exchange-critical. Do not remove, bypass, rename, or weaken them without explicit approval. Loading must fail visibly on missing/invalid registries. Attribution changes need tests at the CCXT or signed-request boundary.
+
+## Writes And Ambiguity
+
+A timeout does not prove rejection. Correlate, reconcile, and confirm before a retry that could duplicate or reverse an action. Prefer offline request-construction tests over live probes.

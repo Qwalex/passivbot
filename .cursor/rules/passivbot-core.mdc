@@ -1,0 +1,42 @@
+---
+description: Passivbot core authority, safety, and docs routing for every task
+alwaysApply: true
+---
+
+# Passivbot Core
+
+Canonical policy lives in `AGENTS.md` and `docs/ai/`. Do not invent parallel rules.
+
+## Always Read First
+
+1. `AGENTS.md`
+2. `docs/ai/principles.md`
+3. `docs/ai/README.md` — then load only task-routed contracts
+
+## Precedence
+
+1. Platform/system instructions
+2. `AGENTS.md`
+3. User request and explicit authority
+4. `docs/ai/` canonical contracts
+5. Feature contracts → user docs → code/tests as evidence
+
+## Explicit Approval Required
+
+Do not do these without clear approval in the current task:
+
+- start live / authenticated paper / testnet bots
+- authenticated exchange requests (including read-only account probes)
+- create / cancel / modify orders
+- use private API keys or credentials
+- SSH, deploy, restart, stop, or signal remote/live processes
+
+Local `fake` exchange is offline and safe by default. Public market-data probes need no keys but use the real network — say so before running them.
+
+## Public Surfaces
+
+Commits, PRs, issues, and pushed artifacts must be useful from the public repo alone. Do not publish private paths, hosts, credentials, operator logs, or unreproducible local context. Config is private by default; publish only intentional templates under `configs/examples/`.
+
+## Keep Changes Narrow
+
+Preserve unrelated user files and pre-existing worktree changes. Add user-facing behavior changes to `CHANGELOG.md` under `Unreleased`.
